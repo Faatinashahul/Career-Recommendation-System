@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careerly  - Smart Career Path Predictor</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #4B2E83;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 24px;
+            color: #fff !important;
+        }
+        .nav-link {
+            color: #fff !important;
+            margin-right: 20px;
+            font-weight: 500;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #4B2E83, #6A4BBC);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        .hero .btn {
+            background: #00C4FF;
+            color: #fff;
+            font-weight: bold;
+            padding: 12px 30px;
+        }
+
+        /* Form card */
+        .card {
+            margin-top: 50px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Section styling */
+        .section {
+            padding: 80px 20px;
+        }
+        .section h2 {
+            color: #4B2E83;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: #4B2E83;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Careerly 🚀</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Discover Your Perfect Career Path</h1>
+            <p>AI-powered predictions based on your skills, interests & academics.</p>
+            <a href="#predict" class="btn">Start Prediction</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section text-center py-5" style="background-color:#f9f9f9;">
+        <div class="container">
+            <h2 class="mb-4">About Careerly</h2>
+
+            <p>
+                Careerly is an <strong>AI-powered career guidance platform</strong> designed to help students and professionals
+                discover their ideal career path. By combining academic performance, personal interests, and skill sets,
+                our system provides personalized insights that go far beyond traditional counseling methods.
+            </p>
+
+            <p>
+                Unlike generic aptitude tests, Careerly uses <strong>machine learning models</strong> trained on real-world career data
+                to give you predictions that are both accurate and future-oriented. Whether you’re a student choosing your major,
+                a graduate preparing for your first job, or a professional looking to pivot into a new field,
+                Careerly equips you with the clarity you need to move forward confidently.
+            </p>
+
+            <p>
+                Our mission is simple: to bridge the gap between education and industry by guiding individuals toward careers
+                where they can <em>thrive, grow, and make meaningful impact</em>. With Careerly,
+                your journey to the right career is no longer a guess it’s a <strong>data-driven decision</strong>.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Features -->
+    <section id="features" class="section bg-light text-center">
+        <div class="container">
+            <h2>Features</h2>
+            <p>✔ AI-Powered Career Prediction</p>
+            <p>✔ Personalized Suggestions</p>
+            <p>✔ Easy-to-use Web App</p>
+        </div>
+    </section>
+    <!-- Prediction Form -->
+    <section id="predict" class="section">
+        <div class="container">
+            <div class="card p-4">
+                <h2 class="text-center mb-4"> Career Path Predictor</h2>
+
+                <form method="POST" action="/predict" id="careerForm">
+                    
+                    <!-- Step 1: Academic Scores -->
+                    <div class="form-step active">
+                        <h5 class="mb-3">How do you rate yourself?</h5>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>Mathematics:</label>
+                                <select class="form-control" name="UCS1511" required>
+                                    <option value="">Select Grade</option>
+                                    <option value="1">O (Outstanding)</option>
+                                    <option value="2">A+</option>
+                                    <option value="3">A</option>
+                                    <option value="4">B+</option>
+                                    <option value="5">B</option>
+                                    <option value="0">No Knowledge</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Programming Fundamentals:</label>
+                                <select class="form-control" name="UCS1512" required>
+                                    <option value="">Select Grade</option>
+                                    <option value="1">O</option><option value="2">A+</option>
+                                    <option value="3">A</option><option value="4">B+</option>
+                                    <option value="5">B</option><option value="0">No Knowledge</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>Data Structures:</label>
+                                <select class="form-control" name="UCS1601" required>
+                                    <option value="">Select Grade</option>
+                                    <option value="1">O</option><option value="2">A+</option>
+                                    <option value="3">A</option><option value="4">B+</option>
+                                    <option value="5">B</option><option value="0">No Knowledge</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Database Management Systems:</label>
+                                <select class="form-control" name="UCS1602" required>
+                                    <option value="">Select Grade</option>
+                                    <option value="1">O</option><option value="2">A+</option>
+                                    <option value="3">A</option><option value="4">B+</option>
+                                    <option value="5">B</option><option value="0">No Knowledge</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>Operating Systems:</label>
+                                <select class="form-control" name="UCS1603" required>
+                                    <option value="">Select Grade</option>
+                                    <option value="1">O</option><option value="2">A+</option>
+                                    <option value="3">A</option><option value="4">B+</option>
+                                    <option value="5">B</option><option value="0">No Knowledge</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Computer Networks:</label>
+                                <select class="form-control" name="UCS1604" required>
+                                    <option value="">Select Grade</option>
+                                    <option value="1">O</option><option value="2">A+</option>
+                                    <option value="3">A</option><option value="4">B+</option>
+                                    <option value="5">B</option><option value="0">No Knowledge</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>Software Engineering:</label>
+                                <select class="form-control" name="UCS1701" required>
+                                    <option value="">Select Grade</option>
+                                    <option value="1">O</option><option value="2">A+</option>
+                                    <option value="3">A</option><option value="4">B+</option>
+                                    <option value="5">B</option><option value="0">No Knowledge</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Artificial Intelligence and Machine Learning:</label>
+                                <select class="form-control" name="UCS1818" required>
+                                    <option value="">Select Grade</option>
+                                    <option value="1">O</option><option value="2">A+</option>
+                                    <option value="3">A</option><option value="4">B+</option>
+                                    <option value="5">B</option><option value="0">No Knowledge</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-primary next-step w-100">Next →</button>
+                    </div>
+
+                    <!-- Step 2: Certification -->
+                    <div class="form-step">
+                        <h5 class="mb-3">Certification</h5>
+                        <div class="mb-3">
+                            <label>Did you do any certification courses additionally? (0/1):</label>
+                            <input type="number" class="form-control" name="certification" required>
+                        </div>
+                        <button type="button" class="btn btn-secondary prev-step">← Back</button>
+                        <button type="button" class="btn btn-primary next-step">Next →</button>
+                    </div>
+
+                    <!-- Step 3: Personal Profile -->
+                    <div class="form-step">
+                        <h5 class="mb-4 text-primary border-bottom pb-2">Personal Profile</h5>
+
+                        <!-- Interests -->
+                        <div class="mb-4">
+                            <label for="interests" class="form-label fw-bold text-info">What are your interests?</label>
+                            <select class="form-select border-info" id="interests" name="interests">
+                                <option value="">-- Select your interest --</option>
+                                <option value="AI/ML">AI / Machine Learning</option>
+                                <option value="Cloud Computing">Cloud Computing</option>
+                                <option value="Data Analysis">Data Analysis</option>
+                                <option value="Software Development">Software Development</option>
+                                <option value="Cyber Security">Cyber Security</option>
+                                <option value="UI/UX Design">UI/UX Design</option>
+                                <option value="Business Analysis">Business Analysis</option>
+                            </select>
+                            <input type="text" class="form-control mt-3 border-info" name="interests_custom" placeholder="Or type your own interest">
+                        </div>
+
+                        <!-- Skills -->
+                        <div class="mb-4">
+                            <label for="skills" class="form-label fw-bold text-success">What are your skills?</label>
+                            <select class="form-select border-success" id="skills" name="skills" multiple>
+                                <option value="Python">Python</option>
+                                <option value="Java">Java</option>
+                                <option value="C++">C++</option>
+                                <option value="SQL">SQL</option>
+                                <option value="React">React</option>
+                                <option value="Node.js">Node.js</option>
+                                <option value="Docker">Docker</option>
+                                <option value="Kubernetes">Kubernetes</option>
+                                <option value="Tableau">Tableau</option>
+                            </select>
+                            <small class="form-text text-muted">Hold CTRL (Windows) / CMD (Mac) to select multiple skills.</small>
+                            <input type="text" class="form-control mt-3 border-success" name="skills_custom" placeholder="Or type additional skills">
+                        </div>
+
+                        <!-- Certificates -->
+                        <div class="mb-4">
+                            <label for="certificate_title" class="form-label fw-bold text-warning">Certificate Courses</label>
+                            <select class="form-select border-warning" id="certificate_title" name="certificate_title">
+                                <option value="">-- Select a certificate --</option>
+                                <option value="AWS">AWS Certification</option>
+                                <option value="Azure">Microsoft Azure Certification</option>
+                                <option value="Google Cloud">Google Cloud Certification</option>
+                                <option value="Data Science">Data Science Professional</option>
+                                <option value="Cyber Security">Cyber Security Essentials</option>
+                                <option value="Full Stack Development">Full Stack Development</option>
+                                <option value="UI/UX">UI/UX Certification</option>
+                                <option value="None">No Certificate</option>
+                            </select>
+                            <input type="text" class="form-control mt-3 border-warning" name="certificate_custom" placeholder="Or type your own certificate">
+                        </div>
+
+                        <!-- Hidden fields to send single-string values to backend -->
+                        <input type="hidden" name="skills" id="skills_input">
+                        <input type="hidden" name="interests" id="interests_input">
+                        <input type="hidden" name="certificate_title" id="certificate_input">
+
+                        <div class="mb-3 form-check">
+                            <input class="form-check-input" type="checkbox" id="use_remote" name="use_remote" value="1">
+                            <label class="form-check-label" for="use_remote">
+                                Generate a higher-quality report (optional)
+                            </label>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-outline-secondary prev-step">← Back</button>
+                            <button type="submit" class="btn btn-gradient">Predict My Career</button>
+                        </div>
+
+                    </div>
+
+                    <!-- Extra CSS for colorful buttons & inputs -->
+                    <style>
+                        .btn-gradient {
+                            background: linear-gradient(90deg, #4B2E83, #6A4BBC, #00C4FF);
+                            border: none;
+                            color: white;
+                            font-weight: bold;
+                            padding: 12px 25px;
+                            border-radius: 8px;
+                            transition: 0.3s;
+                        }
+                        .btn-gradient:hover {
+                            opacity: 0.9;
+                        }
+                        select.form-select:focus, input.form-control:focus {
+                            box-shadow: 0 0 10px rgba(75, 46, 131, 0.5);
+                            border: 2px solid #4B2E83;
+                        }
+                    </style>
+
+
+                </form>
+
+                {% if result %}
+                <div class="alert alert-success mt-4 text-center">
+                    🎯 <strong>Future Career Path:</strong> {{ result }}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-Step Form Script -->
+    <script>
+        const steps = document.querySelectorAll(".form-step");
+        const nextBtns = document.querySelectorAll(".next-step");
+        const prevBtns = document.querySelectorAll(".prev-step");
+        let currentStep = 0;
+
+        nextBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                steps[currentStep].classList.remove("active");
+                currentStep++;
+                steps[currentStep].classList.add("active");
+            });
+        });
+
+        prevBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                steps[currentStep].classList.remove("active");
+                currentStep--;
+                steps[currentStep].classList.add("active");
+            });
+        });
+    </script>
+    <script>
+    // prepare hidden inputs before submit
+    const form = document.getElementById("careerForm");
+
+    form.addEventListener("submit", function (e) {
+
+        // --- 1) Interests ---
+        const interestsSelect = document.getElementById("interests");
+        const interestsCustom = form.querySelector('input[name="interests_custom"]').value.trim();
+        const interestsValue = interestsCustom !== "" ? interestsCustom : (interestsSelect.value || "");
+        document.getElementById("interests_input").value = interestsValue;
+
+        // --- 2) Skills ---
+        const skillsSelect = document.getElementById("skills");
+        const skillsCustom = form.querySelector('input[name="skills_custom"]').value.trim();
+        const selectedSkills = Array.from(skillsSelect.selectedOptions)
+            .map(opt => opt.value)
+            .filter(v => v);
+
+        if (skillsCustom !== "") selectedSkills.push(skillsCustom);
+
+        document.getElementById("skills_input").value = selectedSkills.join(", ");
+
+        // --- 3) Certificate ---
+        const certSelect = document.getElementById("certificate_title");
+        const certCustom = form.querySelector('input[name="certificate_custom"]').value.trim();
+        const certValue = certCustom !== "" ? certCustom : (certSelect.value || "");
+        document.getElementById("certificate_input").value = certValue;
+
+    });
+    </script>
+
+
+    <style>
+        .form-step { display: none; }
+        .form-step.active { display: block; }
+    </style>
+
+
+    <!-- Contact -->
+    <section id="contact" class="section text-center">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: careerly.ai@gmail.com</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Careerly. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
